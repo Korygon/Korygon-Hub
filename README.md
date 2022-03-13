@@ -11,7 +11,7 @@ _G.KorygonHub_Loaded = true
 ██║░╚██╗╚█████╔╝██║░░██║░░░██║░░░╚██████╔╝╚█████╔╝██║░╚███║██║░░██║╚██████╔╝██████╦╝
 ╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚═════╝░
 --------------------------------------------------------------------------------------]]
-_G.KorygonHub_Loaded_V2 = true
+_G.KorygonHub_Loaded.V2 = true
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Korygon/Korygon-Hub/main/source.lua", true))()
 ```
