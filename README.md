@@ -1,6 +1,16 @@
 # Korygon-Hub
 
 ```lua
+--[[------------------------------------------------------------------------------------
+
+██╗░░██╗░█████╗░██████╗░██╗░░░██╗░██████╗░░█████╗░███╗░░██╗██╗░░██╗██╗░░░██╗██████╗░
+██║░██╔╝██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝░██╔══██╗████╗░██║██║░░██║██║░░░██║██╔══██╗
+█████═╝░██║░░██║██████╔╝░╚████╔╝░██║░░██╗░██║░░██║██╔██╗██║███████║██║░░░██║██████╦╝
+██╔═██╗░██║░░██║██╔══██╗░░╚██╔╝░░██║░░╚██╗██║░░██║██║╚████║██╔══██║██║░░░██║██╔══██╗
+██║░╚██╗╚█████╔╝██║░░██║░░░██║░░░╚██████╔╝╚█████╔╝██║░╚███║██║░░██║╚██████╔╝██████╦╝
+╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚═════╝░
+--------------------------------------------------------------------------------------]]
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Korygon/Korygon-Hub/main/source.lua", true))()
 ```
 
@@ -9,6 +19,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Korygon/Korygon-Hub/m
 ## Supported Games
 
 - **De Fuck Isle Sanatorium**. [Game Link](https://www.roblox.com/games/3522803956/NURSEAPP-De-Pride-Isle-Sanatorium-LGBTQ "Roblox Game's")
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Korygon/Korygon-Hub/games/De-Pride-Isle-Sanatorium.lua", true))()
-```
