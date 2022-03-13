@@ -1,5 +1,10 @@
 # Korygon-Hub
 
+```lua
+loadstring(game:HttpGet("", true))()
+```
+
+**Total supported game : 1**
 
 ## Supported Games
 
