@@ -1,7 +1,7 @@
 # Korygon-Hub
 
 ```lua
-loadstring(game:HttpGet("", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/irlng/Korygon-Hub/main/source.lua", true))()
 ```
 
 **Total supported game : 1**
@@ -12,5 +12,3 @@ loadstring(game:HttpGet("", true))()
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/irlng/Korygon-Hub/games/De-Pride-Isle-Sanatorium.lua", true))()
 ```
-
-
