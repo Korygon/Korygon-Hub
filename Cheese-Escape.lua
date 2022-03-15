@@ -633,7 +633,7 @@ Cr_CreditSec:addButton("Script = Korygon Hub", function()
 	KRYGN:Notify("Credits", "Do you want to copy the discord link?", function(accept)
 		if accept then
 			if (setclipboard) then
-				setclipboard("https://discord.gg/jyRWsCxmKr")
+				setclipboard("https://discord.gg/FXR36XUGKx")
 			else
 				KRYGN:Notify("Credits", "Unable to copy the link because of your exploit limitation.")
 			end
