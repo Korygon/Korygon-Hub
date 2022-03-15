@@ -112,7 +112,7 @@ local function GetItem(ItemType)
 		for _, v in pairs(workspace:GetChildren()) do
 			if v:IsA("Model") and v:FindFirstChild("Handle") then
 				if fireclickdetector then
-					fireclickdetector(v.ClickDetector)
+					fireclickdetector(v.Handle.ClickDetector)
 				end
 			end
 		end
@@ -140,14 +140,23 @@ local function GetItem(ItemType)
 		end
 		
 	elseif ItemType == "GetAllCheese" then --
-		for _, v in pairs(game:GetService("Workspace").FindCheese:GetDescendants()) do
-			if v:IsA("ClickDetector") then
-				if fireclickdetector then
-					fireclickdetector(v)
-					wait(.1)
-				end
-			end
-		end
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
+		wait(.1)
+		game:GetService("ReplicatedStorage").AddCheese:FireServer()
 		
 	elseif ItemType == "RedCheese" then --
 		for _, v in pairs(workspace:GetDescendants()) do
@@ -238,12 +247,16 @@ Cheese Section
 
 It_GetCheeseSec:addButton("Get All Cheese", function()
 	GetItem("GetAllCheese")
+
 end)
 
 It_GetCheeseSec:addButton("Get Red Cheese", function()
 	GetItem("RedCheese")
 end)
 
+It_GetCheeseSec:addButton("Add One Cheese", function()
+	game:GetService("ReplicatedStorage").AddCheese:FireServer()
+end)
 
 --[[---
 Keys Section
@@ -389,7 +402,7 @@ end)
 
 
 --[[---
-Teleport To Keys Section
+Teleport To Others Section
 -----]]
 	local Te_TeleToOthers = TeleportPage:addSection("Teleport To Others")
 
@@ -400,6 +413,54 @@ end)
 Te_TeleToOthers:addButton("Teleport to BloxyCola Giver", function()
 	PlayerTo(70, 4, -456)
 end)
+
+
+--[[---
+Teleport To Cheese Section
+-----]]
+local Te_TeleToCheese = TeleportPage:addSection("Teleport To Cheeses")
+
+Te_TeleToCheese:addButton("Teleport to Red Cheese", function()
+	PlayerTo(-12, 5, -115)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 1", function()
+	PlayerTo(-135, 4, -162)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 2", function()
+	PlayerTo(-273, 4, -15)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 3", function()
+	PlayerTo(-255, 49, -164)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 4", function()
+	PlayerTo(-271, 49, -224)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 5", function()
+	PlayerTo(-276, 4, -147)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 6", function()
+	PlayerTo(72, 4, -453)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 7", function()
+	PlayerTo(40, 25, -21)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 8", function()
+	PlayerTo(-146, 4, -233)
+end)
+
+Te_TeleToCheese:addButton("Teleport to Cheese 9", function()
+	PlayerTo(-273, 4, -54)
+end)
+
+
 
 --[[------------------==
 Map Modify Page
@@ -426,6 +487,60 @@ Ma_LightningSec:addToggle("Full Bright", false, function(bool)
 		game:GetService("Lighting").OutdoorAmbient = OTDRAMBNT
 		
 	end
+end)
+
+
+--[[------------------==
+Miscellaneous Page
+--]]------------------==
+local MiscPage = KRYGN:addPage("Miscellaneous", 6034684930)
+--[[---
+Badge Giver Section
+-----]]
+	local Mi_BadgeGiverSec = MiscPage:addSection("Badge Giver")
+
+Mi_BadgeGiverSec:addButton("Get \"You completed the game.\" Badge", function()
+	local args = {
+		[1] = 2124910071
+	}
+
+	game:GetService("ReplicatedStorage").Events.GiveBadge:FireServer(unpack(args))
+end)
+
+Mi_BadgeGiverSec:addButton("Get \"Bloxy Cola\" Badge", function()
+	local args = {
+		[1] = 2124910945
+	}
+
+	game:GetService("ReplicatedStorage").Events.GiveBadge:FireServer(unpack(args))
+end)
+
+Mi_BadgeGiverSec:addButton("Get \"Defeat The Rat\" Badge", function()
+	local args = {
+		[1] = 2124940134
+	}
+
+	game:GetService("ReplicatedStorage").Events.GiveBadge:FireServer(unpack(args))
+end)
+
+Mi_BadgeGiverSec:addButton("Get \"Wrong Cheese\" Badge", function()
+	local args = {
+		[1] = 2124940135
+	}
+
+	game:GetService("ReplicatedStorage").Events.GiveBadge:FireServer(unpack(args))	
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "GiveBadge",
+		Text = "Unable to Give Badge due to unknown reason."
+	})
+end)
+
+Mi_BadgeGiverSec:addButton("Get \"???\" Badge", function()
+	local args = {
+		[1] = 2124940136
+	}
+
+	game:GetService("ReplicatedStorage").Events.GiveBadge:FireServer(unpack(args))
 end)
 
 
@@ -539,4 +654,4 @@ Cr_CreditSec:addButton("Scripter = !Irlng#6325", function()
 	end)
 end)
 
-KRYGN:SelectPage(KRYGN.pages[6], true)
+KRYGN:SelectPage(KRYGN.pages[7], true)
