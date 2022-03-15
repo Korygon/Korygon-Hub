@@ -629,7 +629,7 @@ Cr_CreditSec:addButton("UI = Venyx Ui", function()
 end)
 
 
-Cr_CreditSec:addButton("Script = KorygonHub Discord", function()
+Cr_CreditSec:addButton("Script = Korygon Hub", function()
 	KRYGN:Notify("Credits", "Do you want to copy the discord link?", function(accept)
 		if accept then
 			if (setclipboard) then
@@ -640,6 +640,5 @@ Cr_CreditSec:addButton("Script = KorygonHub Discord", function()
 		end
 	end)
 end)
-
 
 KRYGN:SelectPage(KRYGN.pages[7], true)
