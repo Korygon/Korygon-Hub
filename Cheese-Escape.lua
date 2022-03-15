@@ -629,11 +629,11 @@ Cr_CreditSec:addButton("UI = Venyx Ui", function()
 end)
 
 
-Cr_CreditSec:addButton("Main Scripter = UVIntake#0236", function()
-	KRYGN:Notify("Credits", "Do you want to copy the discord name?", function(accept)
+Cr_CreditSec:addButton("Script = KorygonHub Discord", function()
+	KRYGN:Notify("Credits", "Do you want to copy the discord link?", function(accept)
 		if accept then
 			if (setclipboard) then
-				setclipboard("UVIntake#0236")
+				setclipboard("https://discord.gg/jyRWsCxmKr")
 			else
 				KRYGN:Notify("Credits", "Unable to copy the link because of your exploit limitation.")
 			end
@@ -641,17 +641,5 @@ Cr_CreditSec:addButton("Main Scripter = UVIntake#0236", function()
 	end)
 end)
 
-
-Cr_CreditSec:addButton("Scripter = !Irlng#6325", function()
-	KRYGN:Notify("Credits", "Do you want to copy the discord name?", function(accept)
-		if accept then
-			if (setclipboard) then
-				setclipboard("!Irlng#6325")
-			else
-				KRYGN:Notify("Credits", "Unable to copy the link because of your exploit limitation.")
-			end
-		end
-	end)
-end)
 
 KRYGN:SelectPage(KRYGN.pages[7], true)
