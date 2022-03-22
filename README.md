@@ -6,7 +6,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Korygon/Korygon-Hub/main/source.lua", true))()
 ```
 
-**Total supported game : 2**
+**Total supported game : 3**
 
 ## Supported Games
 
